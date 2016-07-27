@@ -33,3 +33,86 @@ is more than 1 character in the String. Return 'val' and set the 'value' to the 
 
 14. Your answer should be a String value that equals 7. Is that what you got?
 */
+
+
+// Step 1
+var value = 42;
+
+// Step 2
+if (value >= 53) {
+	value +=42;
+} else {
+	value -=13;
+}
+
+// Step 3
+value += "11";
+//value = "2911" 
+//console.log("step3", value);
+
+
+// Step 4
+var array = [];
+
+for (var i = 0; i < value.length; i++) {
+	array[i] = value.charAt(i);
+}
+// console.log("step4", array[3]);
+
+// Step 5
+array.pop();
+array.shift();
+// console.log("step5", array);
+
+// Step 6
+var str = "";
+for (var i = array.length; i > 0 ; i--) {
+	str += array[i-1];
+	}
+// console.log("step6 ", str);	
+// Step 7
+value = parseInt(value); 
+str = parseInt(str); 
+// console.log("step7: value " + value + " str " +str)
+
+
+// Step 8
+value = value + str;
+
+
+// Step 9
+if (value < 60) {
+	value = 14;
+} else if (value == 2930) {
+	value = 27;
+} else { value = 2;}
+
+// console.log("step 9", value)
+
+// Step 10
+var counter = 10;
+while(counter > 0) {
+	value++;
+	counter--;
+}
+
+// console.log("step 10", value);
+
+// Step 11
+var change = function(val) {
+	val = val.toString();
+	if (val.length > 1) {
+		for (var i = 0; i < val.length; i++){
+			if (i != 0) {
+				val = val[i];
+			}
+		}
+	}
+	return val;
+}
+// Step 12
+value = change(value);
+
+// Step 13
+console.log(value);
+
